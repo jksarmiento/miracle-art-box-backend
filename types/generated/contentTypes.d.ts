@@ -389,12 +389,12 @@ export interface ApiArtistArtist extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<1>;
     Artworks: Schema.Attribute.Media<'images' | 'files', true>;
-    Bio: Schema.Attribute.Blocks;
+    Bio: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Diagnosis: Schema.Attribute.Blocks;
-    Intro: Schema.Attribute.Blocks;
+    Diagnosis: Schema.Attribute.Text;
+    Intro: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -16,10 +16,6 @@
       "required": true,
       "unique": true
     },
-    "Diagnosis": {
-      "type": "blocks",
-      "required": false
-    },
     "Age": {
       "type": "integer",
       "required": true,
@@ -32,19 +28,23 @@
     "ParentName": {
       "type": "string"
     },
-    "Intro": {
-      "type": "blocks"
-    },
-    "Bio": {
-      "type": "blocks"
-    },
     "Artworks": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Diagnosis": {
+      "type": "text"
+    },
+    "Intro": {
+      "type": "text"
+    },
+    "Bio": {
+      "type": "text"
     }
   }
 }
