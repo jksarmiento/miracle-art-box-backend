@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "singularName": "artist",
+    "pluralName": "artists",
+    "displayName": "Artist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Diagnosis": {
+      "type": "blocks",
+      "required": false
+    },
+    "Age": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "Nickname": {
+      "type": "string",
+      "required": true
+    },
+    "ParentName": {
+      "type": "string"
+    },
+    "Intro": {
+      "type": "blocks"
+    },
+    "Bio": {
+      "type": "blocks"
+    },
+    "Artworks": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
